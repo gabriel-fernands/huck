@@ -1,6 +1,7 @@
 package oi.github.gabriel.huck.controller;
 
 import oi.github.gabriel.huck.model.Equipamento;
+import oi.github.gabriel.huck.model.dto.EquipamentoDTO;
 import oi.github.gabriel.huck.service.EquipamentoService;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +15,8 @@ public class EquipamentoController {
         this.service = service;
     }
     @PostMapping
-    public Equipamento criar(@RequestBody Equipamento equipamento){
-        return service.createde(equipamento);
+    public EquipamentoDTO criar(@RequestBody EquipamentoDTO dto){
+        return service.createde(dto);
     }
     @GetMapping("/{id}")
     public Equipamento buscar(@PathVariable Long id){

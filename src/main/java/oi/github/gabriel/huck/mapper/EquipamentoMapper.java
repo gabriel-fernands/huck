@@ -6,7 +6,7 @@ import oi.github.gabriel.huck.model.dto.EquipamentoDTO;
 public class EquipamentoMapper {
 
 
-    public Equipamento toEnty(EquipamentoDTO dto){
+    public static Equipamento toEnty(EquipamentoDTO dto){
         return Equipamento.builder()
                 .nome(dto.getNome())
                 .valor(dto.getValor())
