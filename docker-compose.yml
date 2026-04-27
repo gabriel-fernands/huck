@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:17.4-alpine
+    container_name: db_i_huck
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_MULTIPLE_DATABASES: huck
+    ports:
+      - "5559:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data

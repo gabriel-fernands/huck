@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: huck
+
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5559/huck?createDatabaseIfNotExist=true&useSSL=false
+    username: postgres
+    password: 123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8090
+  error:
+    include:
+      stacktrace: never
